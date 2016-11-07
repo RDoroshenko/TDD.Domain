@@ -31,6 +31,15 @@ suite('When playing Warcraft game', function() {
 
                 assert.equal(game.racePlayed, 'Humans');
             });
+            test('Humans get peasants as starting units', function() {
+                let game = new Game;
+                game.selectRace('Humans');
+
+                game.start();
+                let unitsCreated = game.createUnits('Peasant');
+
+                assert.equal(unitsCreated, 'Peasant');
+            });
         });
     });
 });
