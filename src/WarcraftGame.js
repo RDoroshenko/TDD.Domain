@@ -3,7 +3,7 @@ export class Game {
         this.racePlayed = 'undefined';
     };
     start() {};
-    selectRace() {
-        this.racePlayed = 'Orcs';
+    selectRace(race) {
+        this.racePlayed = race;
     };
 };
