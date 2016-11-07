@@ -1,5 +1,5 @@
 import assert from 'assert'
-import { Game } from '../src/WarcraftGame'
+import { Game, Peon } from '../src/WarcraftGame'
 
 suite('When playing Warcraft game', function() {
     suite('Player can select orcs of humans race', function() {
@@ -20,6 +20,13 @@ suite('When playing Warcraft game', function() {
                 let unitsCreated = game.createUnits('Peon');
 
                 assert.equal(unitsCreated, 'Peon');
+            });
+            test('Peons can mine for gold', function() {
+                let peon = new Peon;
+
+                let canMineGold = peon.action('Minegold');
+
+                assert.equal(canMineGold, true);
             });
         });
         suite('When selecting humans', function() {

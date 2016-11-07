@@ -1,5 +1,5 @@
 export class Game {
-    constructor () {
+    constructor() {
         this.racePlayed = 'undefined';
     };
 
@@ -11,5 +11,15 @@ export class Game {
 
     createUnits() {
         return this.racePlayed == 'Orcs' ? 'Peon' : 'Peasant';
+    };
+}
+
+export class Peon {
+    constructor() {
+
+    };
+
+    action() {
+
     };
 }
