@@ -12,6 +12,15 @@ suite('When playing Warcraft game', function() {
 
                 assert.equal(game.racePlayed, 'Orcs');
             });
+            test('Orcs get peons as starting units', function() {
+                let game = new Game;
+                game.selectRace('Orcs');
+
+                game.start();
+                let unitsCreated = game.createUnits('Peon');
+
+                assert.equal(unitsCreated, 'Peon');
+            });
         });
         suite('When selecting humans', function() {
             test('When selecting humans game starts with humans', function() {
