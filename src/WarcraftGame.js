@@ -9,7 +9,7 @@ export class Game {
         this.racePlayed = race;
     };
 
-    createUnits() {
+    createStartingUnits() {
         return this.racePlayed == 'Orcs' ? 'Peon' : 'Peasant';
     };
 }
@@ -20,6 +20,6 @@ export class Peon {
     };
 
     action() {
-
+        return true;
     };
 }

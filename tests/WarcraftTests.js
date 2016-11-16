@@ -17,7 +17,7 @@ suite('When playing Warcraft game', function() {
                 game.selectRace('Orcs');
 
                 game.start();
-                let unitsCreated = game.createUnits('Peon');
+                let unitsCreated = game.createStartingUnits();
 
                 assert.equal(unitsCreated, 'Peon');
             });
@@ -43,7 +43,7 @@ suite('When playing Warcraft game', function() {
                 game.selectRace('Humans');
 
                 game.start();
-                let unitsCreated = game.createUnits('Peasant');
+                let unitsCreated = game.createStartingUnits();
 
                 assert.equal(unitsCreated, 'Peasant');
             });
